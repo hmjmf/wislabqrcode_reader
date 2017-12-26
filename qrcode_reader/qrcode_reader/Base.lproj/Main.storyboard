@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Raz-ho-EKu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gML-HN-Bcd">
+            <objects>
+                <viewController id="Raz-ho-EKu" customClass="ViewController" customModule="qrcode_reader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UBa-C9-EZM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dbv-4g-sKb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="result:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVg-NV-Jpt">
+                                <rect key="frame" x="5" y="429" width="375" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="I3g-ag-36M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="debug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A47-dN-JDV">
+                                <rect key="frame" x="5" y="636.5" width="50" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="in0-R4-cR5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95I-8F-9tc">
+                                <rect key="frame" x="335" y="627" width="35" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="PD6-pz-aiw"/>
+                                </constraints>
+                                <state key="normal" title="start"/>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Nhu-d9-NEW">
+                                <rect key="frame" x="5" y="589" width="365" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5" width="72.200000000000003"/>
+                                </segments>
+                            </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jfv-N6-cy5">
+                                <rect key="frame" x="65" y="632" width="47" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="wwV-RV-zsh"/>
+                                    <constraint firstAttribute="width" constant="45" id="y9u-mu-ZdQ"/>
+                                </constraints>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nhu-d9-NEW" firstAttribute="leading" secondItem="Jm0-ds-vvg" secondAttribute="leading" constant="5" id="0zl-8X-rfj"/>
+                            <constraint firstItem="jfv-N6-cy5" firstAttribute="bottom" secondItem="Jm0-ds-vvg" secondAttribute="bottom" constant="5" id="4LD-VZ-Cou"/>
+                            <constraint firstItem="dbv-4g-sKb" firstAttribute="top" secondItem="UBa-C9-EZM" secondAttribute="top" id="FUV-ka-OtR"/>
+                            <constraint firstItem="gVg-NV-Jpt" firstAttribute="leading" secondItem="Jm0-ds-vvg" secondAttribute="leading" constant="5" id="HHM-87-BeO"/>
+                            <constraint firstItem="95I-8F-9tc" firstAttribute="top" secondItem="Nhu-d9-NEW" secondAttribute="bottom" constant="10" id="JB1-Ni-tGh"/>
+                            <constraint firstItem="dbv-4g-sKb" firstAttribute="leading" secondItem="Jm0-ds-vvg" secondAttribute="leading" id="MZg-5V-vA3"/>
+                            <constraint firstItem="Jm0-ds-vvg" firstAttribute="bottom" secondItem="A47-dN-JDV" secondAttribute="bottom" constant="10" id="NNi-ap-uMM"/>
+                            <constraint firstItem="gVg-NV-Jpt" firstAttribute="trailing" secondItem="Jm0-ds-vvg" secondAttribute="trailing" constant="5" id="Pf2-yI-KEI"/>
+                            <constraint firstItem="Jm0-ds-vvg" firstAttribute="trailing" secondItem="95I-8F-9tc" secondAttribute="trailing" constant="5" id="R51-Bq-lqT"/>
+                            <constraint firstItem="Nhu-d9-NEW" firstAttribute="top" secondItem="gVg-NV-Jpt" secondAttribute="bottom" constant="10" id="SUA-li-2fT"/>
+                            <constraint firstItem="Jm0-ds-vvg" firstAttribute="bottom" secondItem="dbv-4g-sKb" secondAttribute="bottom" id="ahV-7Y-0es"/>
+                            <constraint firstItem="dbv-4g-sKb" firstAttribute="trailing" secondItem="Jm0-ds-vvg" secondAttribute="trailing" id="eLa-vT-xXQ"/>
+                            <constraint firstItem="jfv-N6-cy5" firstAttribute="leading" secondItem="A47-dN-JDV" secondAttribute="trailing" constant="10" id="jSA-iP-3wY"/>
+                            <constraint firstItem="Jm0-ds-vvg" firstAttribute="trailing" secondItem="Nhu-d9-NEW" secondAttribute="trailing" constant="5" id="pRq-pM-7oz"/>
+                            <constraint firstItem="A47-dN-JDV" firstAttribute="leading" secondItem="Jm0-ds-vvg" secondAttribute="leading" constant="5" id="pcF-iW-2Bg"/>
+                            <constraint firstItem="Jm0-ds-vvg" firstAttribute="bottom" secondItem="95I-8F-9tc" secondAttribute="bottom" constant="10" id="wQc-Xc-0hw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jm0-ds-vvg"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="dbv-4g-sKb" id="bFP-V4-vjk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kIP-8k-y4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.8" y="275.71214392803603"/>
+        </scene>
+    </scenes>
+</document>
